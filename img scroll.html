@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Auto-Scrolling Images</title>
+<link rel="stylesheet" href="img scroll.css">
+</head>
+<body>
+<div class="image-container" id="imageContainer">
+  <img src="food.jpg" alt="Image 1">
+  <img src="furniture.jpg" alt="Image 2">
+  <!-- Add more images as needed -->
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('imageContainer');
+  
+  // Function to scroll the container to the left
+  function scrollLeft() {
+    container.scrollLeft += 1; // Increment the scroll position by 1 pixel
+    
+    // Check if the container has reached the end (or start) of its scrollable content
+    if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+      container.scrollLeft = 0; // Reset to the beginning
+    }
+  }
+  
+  // Set an interval to call the scrollLeft function every 50 milliseconds (adjust speed as needed)
+  setInterval(scrollLeft, 50);
+});
+
+
+</script>
+</body>
+</html>
+

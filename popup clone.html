@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Page Rating</title>
+</head>
+<style>
+  .job-alert{
+    width: 200px;
+    height: 300px;
+    background-color: black;
+  }
+</style>
+<body>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+  
+      <div class="job-alert"></div>
+    </div>
+  </div>
+
+  <div id="rating-info">
+    
+  </div>
+
+  <button onclick="showPopup()">Rate this page</button>
+
+  <script>
+
+
+
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+
+
+  </script>
+</body>
+</html>

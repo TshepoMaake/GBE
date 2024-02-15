@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Reactions</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+ #image-rotator {
+  width: 300px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+#image-rotator img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#image-rotator img:not(:first-child) {
+  opacity: 0;
+}
+
+
+  </style>
+</head>
+<body>
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Rotator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="image-rotator">
+    <img src="together.jpg" alt="Image 1">
+    <img src="well done.jpg" alt="Image 2">
+    <img src="furniture.jpg" alt="Image 3">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('#image-rotator img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    // Hide current image
+    images[currentIndex].style.opacity = '0';
+
+    // Increment index or reset to 0 if it exceeds the number of images
+    currentIndex = (currentIndex + 1) % images.length;
+
+    // Show next image
+    images[currentIndex].style.opacity = '1';
+  }, 3000); // Change image every 3 seconds (adjust as needed)
+});
+
+
+  </script>
+</body>
+</html>

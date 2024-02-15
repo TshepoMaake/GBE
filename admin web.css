@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+h1{
+margin-top: 20px;
+font-size: 25px;
+color: white;
+}
+.manage-companies{
+    margin-top: 10px;
+}
+h2{
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 100;
+    margin-left: 10px;
+    color: white;
+    }
+    h3{
+        margin-top: 10px;
+        font-size: 15px;
+        text-align: left;
+        font-weight: 100;
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.623);
+        }
+        #total{
+            margin-left: 8px;
+            color: rgba(255, 255, 255, 0.418);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    #company-list{
+
+height: 350px;
+border-radius: 5px;
+padding: 10px;
+width: 95%;
+margin-top: 10px;
+background-color: rgb(20, 20, 20);
+overflow-y: scroll;
+overflow-y: hidden;
+    }
+    #customer-list{
+      
+height: 350px;
+border-radius: 5px;
+padding: 10px;
+width: 95%;
+margin-top: 10px;
+background-color: rgb(20, 20, 20);
+overflow-y: scroll;
+overflow-y: hidden;
+    }
+    #company-cover{
+       
+        height: 450px;
+        border-radius: 5px;
+        background-color: rgb(10, 10, 10);
+        padding: 10px;
+        width: 95%;
+            }
+    table{
+        margin-top: 25px;
+    }
+    tr{
+        font-size: 13px;
+        font-weight: 100;
+    }
+    th{
+        margin: 10px;
+        font-size: 13px;
+        font-weight: 100;
+        gap: 10px;
+        color: white;
+        padding: 15px 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.144);
+    }
+    select{
+        width: 20px;
+        border-radius: 0px;
+        border: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    label{
+        display: none;
+    }
+    td{
+        margin: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 100;
+        gap: 10px;
+        margin-top: 8px;
+        padding: 5px 20px;
+        color: rgba(255, 255, 255, 0.375);
+        cursor: pointer;
+        
+    }
+    #search{
+        width: 70%;
+        outline: none;
+        padding: 10px 20px;
+        text-align: left;
+        cursor: pointer;
+        border-radius: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        font-size: 15px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.201);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: white;
+    }
+    #srch{
+        padding: 9px 15px;
+        color: rgba(255, 255, 255, 0.551);
+        background-color: black;
+        border: 1px solid rgba(255, 255, 255, 0.155);
+        cursor: pointer;
+        margin-left: -4px;
+        border-radius: 0px;
+
+       border-top-right-radius: 20px;
+       border-bottom-right-radius: 20px;
+    }
+    .company-money{
+        display: flex;
+        justify-content: space-between;
+    }
+    h4{
+        margin-right: 25px;
+        font-weight: 100;
+        font-size: 13px;
+        margin-top: 7px;
+        color: white;
+
+    }
+    #total-amount{
+        margin-left: 2px;
+        color: rgba(255, 255, 255, 0.295);
+    
+    }
+  
+
+ 

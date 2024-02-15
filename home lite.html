@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home lite.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <center>
+         <div class="menu-container">
+         <div class="title-menu">
+          <div class="container-name">
+            <h1><span class="gb">GB</span>empire</h1>
+          </div>
+         </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Register</a></li>
+            </ul>
+         </div>
+   </div>
+   
+
+
+
+   <br>
+   <div class="school-list">
+      <div id="topSchools">
+        <div class="rent-website">Rent the complete business website for only <span class="rental-price">R80</span> per month<span class="read-more" href="#">Read more</span></div>
+          <h2>GLOBAL BUSINESSES</h2>
+
+       <br>
+
+       <div class="select">
+
+        <select id="select">
+        
+                <option>Gauteng</option>
+                <option>Mpumalanga</option>
+                <option>Limpopo</option>
+                <option>Kwazulu Natal</option>
+                <option>Eastern Cape</option>
+                <option>Western Cape</option>
+                <option>North West</option>
+                <option>Free State</option>
+                <option>Northern Cape</option>
+             
+               
+            </select>
+        
+        </div>
+      
+          <br><br>
+          <div class="business-signups">Total business sign ups<span id="business-numbers">0</span></div>
+       <!--profiles-->
+              <br>
+<div class="profile-location-cover">
+   <div id="location-name"><span id="province">Gauteng</span><span id="suburb">MAMELODI</span></div>
+   <center>
+    <br>
+   <div class="profile-flex">
+    
+          <div id="mySchool">
+            <span id="update-job"><span class="job">Jobs</span>0</span>
+            <h3 class="company-name">ShopRite<i class="fa fa-check-square" aria-hidden="true"></i></h3>
+            <div id="profile-image"><img class="profile-image" src="peace.jpg" alt=""></div>
+            <!--ratings-->
+      
+            <div class="average-rating">
+             <span class="rate">Rated:</span>
+             <span id="avgRating">0</span>
+         </div>
+         <div class="rating">
+                  
+          <span class="star" data-rating="1">★</span>
+          <span class="star" data-rating="2">★</span>
+          <span class="star" data-rating="3">★</span>
+          <span class="star" data-rating="4">★</span>
+          <span class="star" data-rating="5">★</span>
+      </div>
+      <br>
+
+              <div class="description">
+            <div id="location">Sosha block L</div>
+              <div id="company-description"></div>
+              </div>
+              <div id="category-image"><img src="furniture.jpg" alt=""></div>
+           
+               
+            <div class="products-listing">
+           <!--item listing-->
+            
+          
+
+
+            <div class="text-container">
+              <span class="animated-text" id="animatedText">Dining set</span>
+                  
+          </div>
+
+<!--end of item listing-->
+
+              <span class="rr">R</span><div class="hover-text" id="hoverText">45 000</div>
+             </div>
+            <div class="customer-satisfaction">
+            <div class="likes" id="likes">Likes<span id="likes-count">0</span></div>
+            <div class="find-more"><a class="findMoreBtn" href="profile lite.html">Find more</a></div>
+            </div>
+          
+                 </div>
+
+      </div>
+
+<!--end f profiles-->
+
+
+   </div>
+
+<!---Business forum-->
+<div class="business-forum">
+<h4>Business forum</h4>
+<ul class="forum-ul">
+  <li class="forum-li"><a class="gallery-a" href="#">Gallery<i class="fa fa-users" aria-hidden="true"></i></a></li>
+  <li class="forum-li"><a class="gallery-a"  href="#">Meetings<i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
+  <li class="meeting-update">0</li>
+  <li class="forum-li"><a class="gallery-a"  href="#">Update<i class="fa fa-bell" aria-hidden="true"></i></i></a></li>
+  <li id="update">0</li>
+  <li class="forum-li"><a class="gallery-a"  href="#">Comment<i class="fa fa-comments" aria-hidden="true"></i></a></li>
+  <li class="comments">0</li>
+
+
+</ul>
+
+<div id="forum-gallery"></div>
+</div>
+<!--end of business forum-->
+<!--forum-reviews-->
+<div class="forum-reviews">
+  <div class="review-title">  Website reviews</div>
+  <div id="review-profile" >
+    <div class="review-rating">
+    <div class="rating">
+                  
+      <span class="star" data-rating="1">★</span>
+      <span class="star" data-rating="2">★</span>
+      <span class="star" data-rating="3">★</span>
+      <span class="star" data-rating="4">★</span>
+      <span class="star" data-rating="5">★</span>
+  </div>
+</div>
+
+
+    <div class="review-picture"><img class="profile-image" src="peace.jpg" alt=""></div>
+    
+
+  <div id="review">I am quiet satisfied with the website</div>
+  
+</div>
+<!--end of customer-reviews-->
+
+   <div class="company-rights">
+ <div class="rights-reserved">2024 CopyRight @All right rights-reserved</div>
+ <div class="admin-login" onclick="openAdmin()">Admin login</div>
+</div>
+
+
+    </center>
+
+
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    function animateText() {
+      const text = "Quality!!!";
+        const textContainer = document.getElementById('animatedText');
+        textContainer.textContent = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.animationDelay = `${i * 0.2}s`;
+            textContainer.appendChild(span);
+        }
+    }
+
+    setInterval(() => {
+        animateText(); // Re-animate every 5 seconds
+    }, 10000); // Wait for 5.2 seconds before re-animating
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedText = document.getElementById('animatedText');
+    const textContent = animatedText.textContent;
+    animatedText.textContent = '';
+
+    for (let i = 0; i < textContent.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = textContent[i];
+        span.style.animationDelay = `${i * 0.2}s`;
+        animatedText.appendChild(span);
+    }
+});
+
+  </script>
+</body>
+</html>

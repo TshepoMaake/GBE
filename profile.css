@@ -1,0 +1,711 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("business1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.438);
+}
+li{
+    margin: 5px;
+    list-style: none;
+    padding: 8px;
+    border: 1px solid rgba(0, 128, 128, 0.466);
+    width: 100px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.171);
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    
+}
+li:hover{
+    background-color: rgba(255, 255, 255, 0.055);
+}
+ul{
+display: flex;
+margin-left: -30px;
+align-items: center;
+justify-content: center;
+margin-top: -20px;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+.profile-picture{
+    height: 80px;
+    width: 80px;
+    border: 5px solid teal;
+    border-radius: 50%;
+    margin-top: 10px;
+    padding: 5px;
+   
+}
+.company-name{
+    font-weight: 900;
+   background-color: teal;
+    border-radius: 20px;
+    
+}
+#profile-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.head-container{
+    display: flex;
+ 
+}
+#company-title{
+    padding: 10px;
+    border-bottom-right-radius: 5px;
+    text-indent: -80px;
+    width: 100%;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.479);
+    font-size: 14px;
+    padding-top: 18px;
+    height: 20px;
+    margin-top: 20px;
+ 
+   border-left: none;
+   background-color: rgba(0, 0, 0, 0.267);
+}
+.title-container{
+    padding: 5px;
+    margin-bottom: 10px;
+     
+    background-color: black;
+}
+.star{
+    color: teal;
+    font-size: 20px;
+}
+.company-rating{
+    color: white;
+    font-size: 10px;
+    margin-top: -5px;
+}
+#avgRating{
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+
+}
+.rating{
+    margin-top: -25px;
+    
+ 
+  
+}
+.average-rating{
+    background-color: teal;
+    padding: 5px;
+    width: 120px;
+    margin-top: -25px;
+    margin-left: 240px;
+    border-radius: 15px;
+  
+  
+}
+.menu-container{
+    background-color: rgba(0, 0, 0, 0.596);
+}
+#update{
+    height: 10px;
+    width: 40px;
+    background-color: teal;
+    color: rgba(255, 255, 255, 0.685);
+    margin-top: -38px;
+    margin-left: -55px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 7px;
+   
+    
+}
+#likes{
+    margin-left: 5px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.377);
+}
+.company-reviews{
+    background-color: rgba(0, 0, 0, 0.301);
+    height: 450px;
+    margin-top: -16px;
+    
+
+}
+
+
+#review-profile{
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    width: 230px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.267);
+    
+}
+
+#company-name{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: #aaaaaa1e;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    background-color: teal;
+    width: 100%;
+    text-indent: -120px;
+    float: left;
+}
+
+.fa-star{
+    color: teal;
+    font-size: 25px;
+}
+#review-comment{
+    width: 85%;
+    height: 130px;
+    border: 1px solid rgba(255, 255, 255, 0.185);
+}
+#products-container{
+ 
+    height: 780px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+   margin-top: -16px;
+ 
+
+ 
+}
+.container-title{
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: teal;
+    font-weight: 900;
+    width: 90%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+#clothes{
+    height: 265px;
+    width: 100%;
+}
+
+#categories{
+    width: 100%;
+    height: auto;
+  background-color: rgba(0, 0, 0, 0.164);
+   display: flex;
+   overflow-x: scroll;
+   overflow-x: hidden;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#category-field:hover{
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 215px;
+    border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+  
+}
+.product-fieldName{
+    color: white;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.144);
+    margin-top: -5px;
+   
+}
+.find-more{
+    font-size: 10px;
+    background-color: teal;
+    padding: 5px;
+    width: 40%;
+
+    color: rgba(255, 255, 255, 0.651);
+    border-radius: 20px;
+}
+#search{
+    text-align: center;
+    font-size: 12px;
+    width: 60%;
+    background-color: transparent;
+    margin-top: 5px;
+    border: 1px solid teal;
+    padding: 10px;
+    outline: none;
+    color: rgba(255, 255, 255, 0.671);
+    cursor: pointer;
+}
+
+#srch{
+    text-align: center;
+    font-size: 12px;
+  margin-left: -5px;
+    background-color: transparent;
+    margin-top: 7px;
+    border: 1px solid teal;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.281);
+    border-left: none;
+    margin-bottom: 7px;
+    width: 80px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+   
+}
+
+#stock-ordered{
+    font-size: 10px;
+    padding: 0px;
+    margin-left: 3px;
+    color: rgba(255, 255, 255, 0.342);
+}
+#total-price{
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 100%;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: -2px;
+    
+    
+}
+#total-priceCount{
+border-radius: 3px;
+    height: 15px;
+    color: price;
+    background-color: teal;
+    padding: 8px;
+    margin-left: 3px;
+}
+
+.clothes-field{
+    float: left;
+    margin-top: 5px;
+   height: 15px;
+   width: 15px;
+   cursor: pointer;
+}
+
+.stock-availability{
+    display: flex;
+    margin-top: 36px;
+    border-radius: 0px;
+    width: 100%;
+
+}
+
+.product-fieldName{
+    color: rgba(255, 255, 255, 0.788);
+    padding: 8px;
+    font-size: 20px;
+    background-color: teal;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+.find-more{
+    font-size: 11px;
+    background-color: teal;
+    padding: 10px;
+    width: 54%;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.651);
+    border-radius: 3px;
+    margin-left: 105px;
+    transition: 0.6s ease-in-out;
+}
+.find-more:hover{
+    background-color: rgba(0, 128, 128, 0.432);
+}
+
+#category-field:hover{
+    background-color: rgba(0, 0, 0, 0.705);
+ 
+    border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+  
+}
+
+#category-field{
+    height: 530px;
+    width: 320px;
+    border: 1px solid teal;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin: 15px;
+    margin-top: 8px;
+    margin-left: -2px;
+    background-color: transparent;
+    
+
+}
+#category-field:hover{
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 530px;
+  
+}
+
+#stock-ordered{
+    font-size: 12px;
+    padding: 0px;
+    margin-left: 3px;
+    color: rgba(255, 255, 255, 0.336);
+}
+#Available{
+    font-size: 13px;
+    width: 50%;
+    background-color: rgba(0, 128, 128, 0.733);
+    padding: 12px;
+    margin-top: -17px;
+    height: 12px;
+    color: white;
+}
+#Total-ordered{
+    font-size: 13px;
+    width: 50%;
+    background-color: teal;
+    padding: 12px;
+    margin-top: -17px;
+    height: 12px;
+    color: white;
+}
+.company-name-cover{
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.418);
+    background-color: black;
+    border-radius: 5px;
+    font-size: 10px;
+    float: left;
+    font-weight: 100;
+    width: 80px;
+    text-indent: 0px;
+    margin-left: 10px;
+}
+#item-name{
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.562);
+    width: 30%;
+    border-radius: 0px;
+    margin-left: 0px;
+    letter-spacing: 1px;
+    padding: 8px;
+    height: 14px;
+    margin-top: -5px;
+}
+#item-price{
+    color: silver;
+    font-size: 20px;
+    font-weight: 900;
+    width: 60%;
+    background-color: rgba(255, 0, 0, 0.822);
+    height: 26px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    margin-top: -8px;
+    text-shadow: 1px 3px 0px black;
+    margin-left: 5px;
+    border: 1px solid white;
+    
+}
+#item-price:hover{
+    font-size: 32px;
+    padding-bottom: 21px;
+    text-indent: 0px;
+    background-color: rgba(255, 0, 0, 0.493);
+    box-shadow: 2px 3px 0px silver ;
+    transition: 0.6s;
+    color: silver;
+    border: 1px solid white;
+  
+}
+
+.products-listing{
+    display: flex;
+    margin-top: 20px;
+    height: 45px;
+}
+.rr{
+    font-size: 10px;
+    color: white;
+    font-weight: 100;
+    margin-top: 3px;
+    margin-left: 4px;
+
+}
+
+
+
+.hover-text {
+    height: 30px;
+    background-color: #3498db;
+    color: gold;
+    border-radius: 0px;
+    animation: hoverAnimation 0.3s  infinite alternate;
+    font-weight: 900;
+    margin-left: 5px;
+    margin-top: -15px;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60%;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        background-color: #3498db;
+     
+    }
+    100% {
+        background-color: rgba(182, 12, 12, 0.76);
+        transform: translateY(0px); /* You can adjust this value for desired hover effect */
+height: 47px;
+        font-weight: 900;
+        font-size: 40px;
+        box-shadow: 3px 5px 0px silver;
+        text-shadow: 3px 3px 0px black;
+        padding-bottom: 20px;
+        
+    }
+
+}
+.product-listing{
+    display: flex;
+}
+
+.text-container {
+    
+   
+    overflow: hidden;
+    margin-top: -15px;
+    width: 80px;
+    background-color: teal;
+    border-radius: 0px;
+    padding: 7px;
+    height: 20px;
+    margin-left: 5px;
+    
+}
+
+.animated-text {
+    position: relative;
+    display: inline-block;
+    transform-origin: 0 50%;
+    animation: slideIn 1s forwards;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.534);
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    
+    }
+    
+}
+.profile-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.forum-reviews{
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.233);
+    padding: 10px 0;
+    margin-top: -52px;
+    
+}
+.review-title{
+    font-size: 15px;
+    color: white;
+    width: 60%;
+    border-radius: 30px;
+    background-color: teal;
+    padding: 25px 0px;
+   
+}
+#review-profile{
+    height: auto;
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 10px;
+    margin-top: 0px;
+    padding: 20px;
+    
+
+}
+#review{
+    width: 75%;
+    padding: 5px;
+    height: 45px;
+    margin-top: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+   margin-top: 8px;
+    margin-left: 85px;
+    
+}
+h4{
+    background-color: teal;
+    padding: 10px;
+    width: 80%;
+ color: rgba(255, 255, 255, 0.63);
+ margin-top: 20px;
+ border-radius: 30px;
+ font-size: 28px;
+ text-shadow: 1px 2px 0px black;
+ font-weight: 900;
+                                   
+}
+.review-picture{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    float: left;
+    padding: 5px;
+    margin-top: -10px;
+    margin-left: -10px;
+    
+}
+.rating{
+    margin-top: -20px;
+}
+.star{
+    font-size: 18px;
+    color: salmon;
+}
+.fa-thumbs-up{
+    margin-left: 8px;
+    color: teal;
+}
+.fa-laptop{
+    margin-left: 8px;
+    color: teal;
+}
+.fa-phone-square{
+    margin-left: 8px;
+    color: teal;
+    font-size: 14px;
+}
+.fa-bell{
+    margin-left: 8px;
+    color: teal;
+    font-size: 14px;
+}
+#update{
+    margin-top: -45px;
+}
+#select{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-top: 6px;
+    color: white;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+select option{
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    margin: 10px;
+    border-radius: 5px;
+}
+#item-list{
+    background-color: black;
+    height: 400px;
+    margin-top: -147px;
+    padding-top: 15px;
+    
+    
+}
+#sub-item{
+    width: 210px;
+    height: 265px;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    margin: 8px;
+    border-radius: 5px;
+    margin-left: 20px;
+
+}
+#view{
+    margin-top: 5px;
+    float: right;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.767);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    font-size: 10px;
+
+}
+#view:hover{
+background-color: rgba(20, 20, 20);
+}
+.review-cover{
+    padding: 10px;
+    background-color: rgba(0, 128, 128, 0.404);
+    height: 250px;
+    margin-top: -10px;
+}
+#item-scroll{
+    width: 90%;
+    height: auto;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+    margin-top: 55px;
+    border-radius: 5px;
+    
+}
+

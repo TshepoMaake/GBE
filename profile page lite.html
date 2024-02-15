@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <center>
+
+ <div class="menu-container">
+
+        <div class="head-titles">
+    
+    <div id="company-name" class="company-name">GB Empire</div>
+
+
+    <div class="business-rating">
+                
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+    </div>
+   
+    <span id="avgRating">0</span>
+
+
+   
+    <br> <br><br><br><br><br>
+ 
+
+            
+            </div>
+            <div class="heads">
+
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>  
+                    <li><a href="#">Suppliers<span id="supplier-count">0</span></a></li>
+                    <li onclick="increaseFollowers()"><a><button class="follower">follow</button></a><span id="followerCount">0</span></li>
+                    <li><a href="login.html">logins</a></li>
+                </ul>
+               </div>
+          
+        
+<label for="select-province">Gauteng</label>
+<select id="select-province">
+    <option>Gauteng</option>
+    <option>Limpopo</option>
+    <option>Kwazulu Natal</option>
+    <option>Mpumalanga</option>
+    <option>North West</option>
+    <option>Northern Cape</option>
+    <option>Western Cape</option>
+    <option>Free State</option>
+    <option>Eastern Cape</option>
+</select>
+
+ </div>
+ <br>
+ <!--province category-->
+     <div class="businesses">Total businesses registered<span id="totalBusinesses">0</span></div>
+    <br><br>
+     <div id="province-category">
+        <div id="area-display"><span id="Gauteng">Gauteng</span><span id="Mamelodi">Mamelodi</span></div>
+ <div id="products-container"></div>
+<br>
+    <div id="categories">
+       <!--categories-->
+    
+                       <!--category field-->
+                       <div id="category-field">
+                       
+                        <div class="product-fieldName">GB Empire</div>
+                        
+ 
+                        <div id="category-image" ><img src="furniture.jpg" alt=""></div>
+                       
+                        <div class="products-listing">
+                            <!--item listing-->
+                            <div class="text-container">
+               <span class="animated-text" id="animatedText">Dining set</span>
+                           </div>
+                 
+                 <!--end of item listing-->
+                 
+                               <span class="rr">R</span><div class="hover-text" id="hoverText"> 35 000</div>
+                              </div>
+<!--description-->
+<div id="description"></div>
+<!--end of description-->     
+                              <div id="item-description">
+                                <div class="moreless">123</div>
+                       <br><br>
+                                <div class="following" onclick="increaseFollowers()">Followers<span id="followerCount">0</span></div>
+                       </div>
+                      
+                            <div id="add-to-cart"><a href="profile lite.html">Find more</a></div>
+                          
+                       
+                        </div>
+                    
+                        
+                        </div>
+    </div>
+               <!--end category field-->
+
+
+       <!--end of categories-->
+      
+    </div>
+    <br>
+</div>
+
+    <!--company-reviews-->
+  <!--forum-reviews-->
+<div class="forum-reviews">
+    <h4>  Customer feedback</h4>
+
+    <main>
+      
+        <section id="review-form">
+            
+           
+            <div>
+
+                <label for="rating">Rating</label>
+                <select id="rating" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+            </div>
+            <div>
+                <label for="comment">Your Review:</label>
+                <textarea id="comment" required placeholder="Leave a feedback now"></textarea>
+            </div>
+            <button id="submit-review">Submit</button>
+            <br><br>
+        </section>
+        <section id="reviews">
+           
+            <div id="review-list">
+                <!-- Reviews will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+  <!--end of customer-reviews-->
+  
+    </center>
+ 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star');
+    const avgRating = document.getElementById('avgRating');
+    const ratingCounts = {
+        1: document.getElementById('rating1Count'),
+        2: document.getElementById('rating2Count'),
+        3: document.getElementById('rating3Count'),
+        4: document.getElementById('rating4Count'),
+        5: document.getElementById('rating5Count'),
+    };
+    const cupImg = document.getElementById('cupImg');
+    const threshold1 = 100;
+    const threshold2 = 200;
+    const threshold3 = 300;
+    const threshold4 = 400;
+    const threshold5 = 500;
+
+    let ratings = [];
+    let ratingCountsData = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+    };
+
+    stars.forEach((star) => {
+        star.addEventListener('click', function () {
+            const rating = parseInt(star.getAttribute('data-rating'));
+            ratings.push(rating);
+
+            // Update local storage with new ratings
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            // Update the average rating and rating counts
+            updateAverageRating();
+        });
+    });
+
+    function updateAverageRating() {
+        if (ratings.length > 0) {
+            const sum = ratings.reduce((total, rating) => total + rating, 0);
+            const average = (sum / ratings.length).toFixed(1);
+            avgRating.textContent = average;
+            updateRatingCounts();
+            updateCupStatus();
+        }
+    }
+
+    function updateRatingCounts() {
+        for (const rating in ratingCountsData) {
+            ratingCountsData[rating] = ratings.filter((r) => r === parseInt(rating)).length;
+            ratingCounts[rating].textContent = ratingCountsData[rating];
+        }
+    }
+
+    function updateCupStatus() {
+        if (ratingCountsData[5] >= threshold5) {
+            cupImg.style.display = 'block';
+        } else if (ratingCountsData[4] >= threshold4) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[3] >= threshold3) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[2] >= threshold2) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[1] >= threshold1) {
+            cupImg.style.display = 'none';
+        }
+    }
+
+    // Load ratings from local storage
+    if (localStorage.getItem('ratings')) {
+        ratings = JSON.parse(localStorage.getItem('ratings'));
+        updateAverageRating();
+    }
+});
+
+//increase followers
+
+let followerCount = 0; // Initial follower count
+
+function increaseFollowers() {
+  // Increase the follower count by 1
+  followerCount += 1;
+
+  // Update the displayed follower count
+  const followerCountElement = document.getElementById('followerCount');
+  followerCountElement.innerText = followerCount;
+
+  // Change the button text to "Following"
+  const followButton = document.querySelector('Button');
+  followButton.innerText = 'following';
+  followButton.classList.add('following');
+
+  // Disable the button after clicking
+  followButton.disabled = true;
+}
+
+//end of follow
+
+//reviews
+
+document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById("submit-review");
+    const reviewList = document.getElementById("review-list");
+
+    submitButton.addEventListener("click", function() {
+        
+        const rating = document.getElementById("rating").value;
+        const comment = document.getElementById("comment").value;
+
+        if (rating && comment) {
+            const review = {
+               
+                rating: rating,
+                comment: comment,
+            };
+
+            // Save the review to local storage
+            saveReview(review);
+
+            // Add the review to the list
+            displayReview(review);
+
+            // Clear the form fields
+           
+            document.getElementById("rating").value = "5";
+            document.getElementById("comment").value = "";
+        }
+    });
+
+    // Load existing reviews from local storage
+    loadReviews();
+
+    function saveReview(review) {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+    }
+
+    function loadReviews() {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        for (const review of reviews) {
+            displayReview(review);
+        }
+    }
+
+    function displayReview(review) {
+        const reviewDiv = document.createElement("div");
+        reviewDiv.classList.add("review");
+
+        const ratingStars = "★".repeat(review.rating);
+        const ratingText = `<span class="rating">${ratingStars}</span>`;
+
+        reviewDiv.innerHTML = `<h3 id="review-profile">${review.name}</h3>${ratingText}<p>${review.comment}</p>`;
+
+        reviewList.appendChild(reviewDiv);
+    }
+});
+
+//end of reviews
+    </script>
+</body>
+</html>

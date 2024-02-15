@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Hover Every 5 Seconds</title>
+<link rel="stylesheet" href="hover.css">
+</head>
+<body>
+
+<div class="hover-text" id="hoverText">Hover me!</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function animateText() {
+        const text = "Welcome!";
+        const textContainer = document.getElementById('animatedText');
+        textContainer.textContent = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.animationDelay = `${i * 0.2}s`;
+            textContainer.appendChild(span);
+        }
+    }
+
+    setInterval(() => {
+        animateText(); // Re-animate every 5 seconds
+    }, 30000); // Wait for 5.2 seconds before re-animating
+});
+</script>
+</body>
+</html>
+

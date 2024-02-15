@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="group admin page.css">
+</head>
+<body>
+    
+<center>
+
+    <h1>Group admin</h1>
+
+
+    <form action="main.html">
+        <input type="text" id="txt" placeholder="Update group">
+        <input type="submit" class="pass-value" value="Submit" onclick="passValues()">
+    </form>
+   
+    <div class="manage-users">
+        <h2>Accounts</h2>
+        <input type="search" id="search" placeholder="Search user">
+        <button id="srch">Search</button>
+        <div id="account-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Province</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>Tshepo jnr</th>
+                        <td>Limpopo</th>
+                            <label for="select">Select</label>
+                        <td>Blocked<select id="select">
+                            <option>Activate</option>
+                            <option>Block</option>
+                        
+                        </select>
+                        </th>
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+    </div>
+<ul>
+    
+</ul>
+
+</center>
+
+<script>
+    //pass vales to another page
+function passValues(){
+    var firstName = document.getElementById("txt").value;
+    localStorage.setItem("textValue", firstName);
+
+    return false;
+}
+</script>
+
+</body>
+</html>

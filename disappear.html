@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scrollable Image Gallery</title>
+<link rel="stylesheet" href="disappear.css">
+</head>
+<body>
+<div class="gallery-container">
+  <div class="main-image">
+    <img src="food.jpg" alt="Main Image">
+  </div>
+  <div class="small-images" id="smallImages">
+    <!-- Small images will be dynamically added here -->
+  </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const smallImagesContainer = document.getElementById('smallImages');
+  const mainImage = document.querySelector('.main-image img');
+  
+  // Sample images array
+  const images = ['food.jpg', 'furniture.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg'];
+  
+  // Add small images to the gallery
+  images.forEach((imageSrc, index) => {
+    const img = document.createElement('img');
+    img.src = imageSrc;
+    img.addEventListener('click', function() {
+      mainImage.src = imageSrc;
+      // Remove active class from all images
+      document.querySelectorAll('.small-images img').forEach(img => {
+        img.classList.remove('active');
+      });
+      // Add active class to the clicked image
+      this.classList.add('active');
+    });
+    // Set the first image as active by default
+    if (index === 0) {
+      img.classList.add('active');
+      mainImage.src = imageSrc;
+    }
+    smallImagesContainer.appendChild(img);
+  });
+});
+
+
+</script>
+</body>
+</html>
+

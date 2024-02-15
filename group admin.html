@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="group admin.css">
+</head>
+<body>
+    <center>
+   <!--business forum-->
+   <div class="business-gathering">
+    
+    <div id="Upload">
+        <div class="Upload-content">
+            <span class="close" onclick="closeUpload()">&times;</span>
+            <br><br>
+            <input type="email" id="admin-email" placeholder="Admin email" required>
+            <br><br>
+            <input type="text" id="admin-username" placeholder="Admin username" required>
+           <br><br>
+            <input type="password" id="admin-password" placeholder="Password" required>
+            <br><br><br>
+            <button id="admin-btn" onclick="openAdminPage()"><a href="group admin page.html">Login now</a></button><span class="admin-registration"><a href="admin registration.html">Or register first</a></span>
+        </div>
+    </div>
+    <!--end of business forum-->
+
+
+    <script>
+        //pass vales to another page
+function passValues(){
+    var firstName = document.getElementById("txt").value;
+    localStorage.setItem("textValue", firstName);
+
+    return false;
+}
+
+    </script>
+</center>
+</body>
+</html>

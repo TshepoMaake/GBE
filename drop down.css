@@ -1,0 +1,68 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the container */
+  .custom-select {
+    position: relative;
+    width: 180px; /* Width of the dropdown */
+   margin: 20px;
+  }
+  
+  /* Hide the original dropdown arrow */
+  .custom-select select {
+    appearance: none; /* For removing default styles in some browsers */
+    -webkit-appearance: none; /* For Chrome, Safari, etc. */
+    -moz-appearance: none; /* For Firefox */
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #f9f9f9, #e9e9e9);
+    width: 350px;
+  }
+  
+  /* Style when the dropdown is focused */
+  .custom-select select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    cursor: pointer;
+    
+  }
+  
+  /* Style the dropdown arrow */
+  .custom-select::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures that the click goes through the arrow */
+  }
+  
+  /* Style the options */
+  .custom-select select option {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: teal;
+    cursor: pointer;
+  }
+  
+  /* Style when an option is hovered */
+  .custom-select select option:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  /* Style when an option is selected */
+  .custom-select select option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }

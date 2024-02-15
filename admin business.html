@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin business.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <center>
+
+ <div class="menu-container">
+
+        <div class="head-titles">
+    <div class="profile-picture"><img id="profile-image" src="peace.jpg" alt=""></div>
+    <div id="company-name" class="company-name">GB Empire</div>
+
+
+    <div class="business-rating">
+                
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+    </div>
+   
+    <span id="avgRating">0</span>
+     
+            </div>
+            <div class="heads">
+                
+                
+                <ul>
+                    
+                    <li><a href="#">About us</a></li> 
+                    <li ><a href="#">Contact</a></li> 
+                    <li onclick="showPopup()" class="alert" id="jobs" > Jobs<div class="notify"></div></li>
+                
+                    <li onclick="increaseFollowers()"><a class="Follower"><button class="follower">follow</button></li>
+                    <li><a href="#">Customers</a><span id="followerCount">0</span></li>
+                   
+                </ul>
+               </div>
+               <button class="btn">Notify</button>
+        
+               
+              
+
+</div>
+<div id="products-container">
+  
+  
+    <div class="container-title">Products by category </div>
+    
+        <div class="track-order" onclick="openTrack()">Track order</div>
+        <div class="cart-button" onclick="openCart()">Shopping</div>
+        <span id="cart-count">71</span>
+        <br><br>
+        
+        <div class="select">
+            <label for="select">Select</label>
+                    <select id="select">
+                    
+                            <option>Electronics</option>
+                            <option>Men's clothing</option>
+                            <option>Women's clothing</option>
+                            <option>Kids clothing</option>
+                            <option>Shoes</option>
+                            <option>Home and furniture</option>
+                            <option>Health and beauty</option>
+                            <option>Sports and outdoors</option>
+                            <option>Toys and games</option>
+                            <option>Groceries and household</option>
+                            <option>Catering</option>
+                            <option>Cars</option>
+                            <option>Services</option>
+                            
+                           
+                        </select>
+                       
+                    </div>
+                    <br>
+                    <input type="search" id="search" placeholder="Search your item instead ">
+                    <button id="srch">Search</button>
+<br>
+
+    <div id="categories">
+       <!--categories-->
+     
+                       <!--category field-->
+                       <div id="category-field" >
+                       
+                        <div class="product-fieldName">FURNITURE</div>
+                        <div id="category-image" ><img src="furniture.jpg" alt=""></div>
+                       
+                        <div class="products-listing">
+                            <!--item listing-->
+                            <div class="text-container">
+               <span class="animated-text" id="animatedText">Dining set</span>
+                           </div>
+                 
+                 <!--end of item listing-->
+                 
+                               <span class="rr">R</span><div class="hover-text" id="hoverText"> 35 000</div>
+                              </div>
+<!--description-->
+<div id="description"></div>
+<!--end of description-->
+                              <div id="item-description">
+                                <div class="moreLess">
+                                    <div id="less" onclick="decrement()">-</div>
+                                    <div id="more" onclick="increment()">+</div>
+                                    <div class="itemItem">Items<span id="number">0</span></div>
+                                        </div>
+                            </div>
+                            <button id="add-to-cart" onclick="addToCart(item2)">Add to cart</button>
+
+                    </div>
+                    
+               <!--end category field-->
+
+
+       <!--end of categories-->
+    
+                </div>
+                
+                 <!--popup-->
+
+               <div id="popup" class="popup">
+                
+                <div class="popup-content">
+                
+                  <span class="close" onclick="closePopup()">&times;</span>
+                  <div class="Job-connectivity">job position</div>
+              
+                  <div class="job-alert">
+                  
+                  </div>
+                </div>
+              </div>
+              <div id="rating-info">
+              </div>
+               <!--end of popup-->
+               
+    
+            </div>
+
+         </div>
+         
+         <!--shopping cart-->
+         <div id="Cart">
+            <div class="cart">
+                <span class="close" onclick="closeCart()">&times;</span>
+                <br><br><br>
+                <h1 class="cart-title">Shopping cart</h1>
+                <br><br>
+                <div id="shopping-list"></div>
+                <div id="Shopping-price">Total cost R<span id="amount">0</span></div>
+            </div>
+        </div>
+<!--end of shopping cart-->
+
+   <!--track order-->
+   <div id="Track">
+    <div class="Track-content">
+        <span class="close" onclick="closeTrack()">&times;</span>
+        <br><br><br>
+        <h1 class="track-title">Track my order</h1>
+        <br><br>
+        <table>
+             
+            <tr>
+                <th id="order-id"> order ID</th>
+                <th>Date ordered</th>
+                <th>Items
+                    <label for="order-items">Items</label>
+                    <select id="order-items">
+                        <option></option>
+                    </select>
+                </th>
+                <th> Status</th>
+                
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+                  </table>
+      
+    </div>
+</div>
+<!--end of tracking order-->
+
+          
+      
+
+
+    <!--company-reviews-->
+  <!--forum-reviews-->
+<div class="forum-reviews">
+    <h4>  Customer feedback</h4>
+
+    <main>
+      
+        <section id="review-form">
+            
+           
+            <div>
+
+                <label for="rating">Rating</label>
+                <select id="rating" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+            </div>
+            <div>
+                <label for="comment">Your Review:</label>
+                <textarea id="comment" required placeholder="Leave a feedback now"></textarea>
+            </div>
+            <button id="submit-review">Submit</button>
+            <br><br>
+        </section>
+        <section id="reviews">
+           
+            <div id="review-list">
+                <!-- Reviews will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+  <!--end of customer-reviews-->
+  
+    </center>
+ 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star');
+    const avgRating = document.getElementById('avgRating');
+    const ratingCounts = {
+        1: document.getElementById('rating1Count'),
+        2: document.getElementById('rating2Count'),
+        3: document.getElementById('rating3Count'),
+        4: document.getElementById('rating4Count'),
+        5: document.getElementById('rating5Count'),
+    };
+    const cupImg = document.getElementById('cupImg');
+    const threshold1 = 100;
+    const threshold2 = 200;
+    const threshold3 = 300;
+    const threshold4 = 400;
+    const threshold5 = 500;
+
+    let ratings = [];
+    let ratingCountsData = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+    };
+
+    stars.forEach((star) => {
+        star.addEventListener('click', function () {
+            const rating = parseInt(star.getAttribute('data-rating'));
+            ratings.push(rating);
+
+            // Update local storage with new ratings
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            // Update the average rating and rating counts
+            updateAverageRating();
+        });
+    });
+
+    function updateAverageRating() {
+        if (ratings.length > 0) {
+            const sum = ratings.reduce((total, rating) => total + rating, 0);
+            const average = (sum / ratings.length).toFixed(1);
+            avgRating.textContent = average;
+            updateRatingCounts();
+            updateCupStatus();
+        }
+    }
+
+    function updateRatingCounts() {
+        for (const rating in ratingCountsData) {
+            ratingCountsData[rating] = ratings.filter((r) => r === parseInt(rating)).length;
+            ratingCounts[rating].textContent = ratingCountsData[rating];
+        }
+    }
+
+    function updateCupStatus() {
+        if (ratingCountsData[5] >= threshold5) {
+            cupImg.style.display = 'block';
+        } else if (ratingCountsData[4] >= threshold4) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[3] >= threshold3) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[2] >= threshold2) {
+            cupImg.style.display = 'none';
+        } else if (ratingCountsData[1] >= threshold1) {
+            cupImg.style.display = 'none';
+        }
+    }
+
+    // Load ratings from local storage
+    if (localStorage.getItem('ratings')) {
+        ratings = JSON.parse(localStorage.getItem('ratings'));
+        updateAverageRating();
+    }
+});
+
+//increase followers
+
+let followerCount = 0; // Initial follower count
+
+function increaseFollowers() {
+  // Increase the follower count by 1
+  followerCount += 1;
+
+  // Update the displayed follower count
+  const followerCountElement = document.getElementById('followerCount');
+  followerCountElement.innerText = followerCount;
+
+  // Change the button text to "Following"
+  const followButton = document.querySelector('Button');
+  followButton.innerText = 'following';
+  followButton.classList.add('following');
+
+   // Disable the button after clicking
+   followButton.disabled = true;
+ 
+}
+
+
+
+//end of follow
+
+//reviews
+
+document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById("submit-review");
+    const reviewList = document.getElementById("review-list");
+
+    submitButton.addEventListener("click", function() {
+        
+        const rating = document.getElementById("rating").value;
+        const comment = document.getElementById("comment").value;
+
+        if (rating && comment) {
+            const review = {
+               
+                rating: rating,
+                comment: comment,
+            };
+
+            // Save the review to local storage
+            saveReview(review);
+
+            // Add the review to the list
+            displayReview(review);
+
+            // Clear the form fields
+           
+            document.getElementById("rating").value = "5";
+            document.getElementById("comment").value = "";
+        }
+    });
+
+    // Load existing reviews from local storage
+    loadReviews();
+
+    function saveReview(review) {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+    }
+
+    function loadReviews() {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        for (const review of reviews) {
+            displayReview(review);
+        }
+    }
+
+    function displayReview(review) {
+        const reviewDiv = document.createElement("div");
+        reviewDiv.classList.add("review");
+
+        const ratingStars = "★".repeat(review.rating);
+        const ratingText = `<span class="rating">${ratingStars}</span>`;
+
+        reviewDiv.innerHTML = `<h3 id="review-profile">${review.name}</h3>${ratingText}<p>${review.comment}</p>`;
+
+        reviewList.appendChild(reviewDiv);
+    }
+});
+
+//end of reviews
+
+//shopping cart script
+let increment = () => {
+    console.log("increment");
+};
+
+let decrement = () => {
+    console.log("decrement");
+};
+
+
+
+//end of shopping cart script
+
+//notification
+var notify = document.querySelector(".notify");
+var btn = document.querySelector(".btn");
+btn.addEventListener("click", active);
+
+function active(){
+    var add = Number(notify.getAttribute("data-count") || 0);
+    notify.setAttribute("data-count", add + 1);
+
+    if(add===0){
+        notify.classList.add("add-numb");
+    }
+    false
+}
+
+//popup
+
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+//cart
+function openCart() {
+  document.getElementById('Cart').style.display = 'block';
+}
+
+function closeCart() {
+  document.getElementById('Cart').style.display = 'none';
+}
+
+//track order
+//cart
+function openTrack() {
+  document.getElementById('Track').style.display = 'block';
+}
+
+function closeTrack() {
+  document.getElementById('Track').style.display = 'none';
+}
+
+
+//cart script
+var addItemId = 0;
+
+
+function addToCart(item){
+addItemId += 1;
+var selectedItem = document.createElement("div");
+selectedItem.classList.add("cartImg");
+selectedItem.setAttribute("id",addItemId);
+var img = document.createElement("img");
+img.setAttribute("src",item.children[0].currentSrc);
+var title = document.createElement("div");
+var cartItems = document.getElementById("title");
+selectedItem.append(img);
+cartItems.append(selectedItem);
+title.innerText = item.children[1].innerText;
+var label = document.createElement("div");
+label.innerText = item.children[2].children[0].innerText;
+var select = document.createElement("span");
+select.innerText = item.children[2].children[1].value;
+label.append(select);
+selectedItem.append(title);
+selectedItem.append(label);
+var delBtn = document.createElement("button");
+delBtn.innerText = "delete";
+delBtn.setAttribute("onclick", "del("+addItemId+")");
+selectedItem.append(delBtn);
+};
+function del(item){
+    document.getElementById(item).remove();
+};
+
+    </script>
+</body>
+</html>

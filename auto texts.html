@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-changing Text</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+    .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-container {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  opacity: 0;
+  animation: fade 5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-container">
+      <p class="text">Supply chain</p>
+      <p class="text">logistics</p>
+      <p class="text">Procurement</p>
+    </div>
+  </div>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const texts = document.querySelectorAll('.text');
+  let index = 0;
+
+  setInterval(function() {
+    texts.forEach(text => text.style.opacity = 0);
+    index = (index + 1) % texts.length;
+    texts[index].style.opacity = 1;
+  }, 5000);
+});
+
+
+  </script>
+</body>
+</html>

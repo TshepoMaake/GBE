@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+   
+<div class="container">
+
+<div class="card" id="item1">
+    <img src="furniture.jpg" alt="">
+    <div class="title">furniture</div>
+
+<div>
+<label>Size :</label>
+<select  id="select">
+    <option>26</option>
+    <option>28</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+</select>
+</div>
+<button onclick="addToCart(item1)">Add to cart</button>
+
+</div>
+
+<!--item2-->
+
+<div class="card" id="item2">
+    <img src="electronics.jpg" alt="">
+    <div class="title">electronics</div>
+
+<div>
+<label for="select">Size:</label>
+<select  id="select">
+    <option>26</option>
+    <option>28</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+</select>
+</div>
+<br>
+<button onclick="addToCart(item2)">Add to cart</button>
+
+
+
+</div>
+</div>
+<!--cart-->
+<div class="cart" id="cart">
+  
+<div class="title">CART<span class="quantity">0</span></div><hr/>
+<div class="total">0</div>
+<div id="title"></div>
+
+</div>
+
+    <script>
+
+var addItemId = 0;
+
+
+function addToCart(item){
+addItemId += 1;
+var selectedItem = document.createElement("div");
+selectedItem.classList.add("cartImg");
+selectedItem.setAttribute("id",addItemId);
+var img = document.createElement("img");
+img.setAttribute("src",item.children[0].currentSrc);
+var title = document.createElement("div");
+var cartItems = document.getElementById("title");
+selectedItem.append(img);
+cartItems.append(selectedItem);
+title.innerText = item.children[1].innerText;
+var label = document.createElement("div");
+label.innerText = item.children[2].children[0].innerText;
+var select = document.createElement("span");
+select.innerText = item.children[2].children[1].value;
+label.append(select);
+selectedItem.append(title);
+selectedItem.append(label);
+var delBtn = document.createElement("button");
+delBtn.innerText = "delete";
+delBtn.setAttribute("onclick", "del("+addItemId+")");
+selectedItem.append(delBtn);
+}
+function del(item){
+    document.getElementById(item).remove();
+}
+
+
+
+
+    </script>
+</body>
+</html>

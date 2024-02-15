@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.hover-text {
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+    animation: hoverAnimation 0.6s  infinite alternate;
+    font-weight: 900;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        background-color: #3498db;
+        transform: translateY(0);
+    }
+    100% {
+        background-color: red;
+        transform: translateY(0px); /* You can adjust this value for desired hover effect */
+        padding: 20px;
+        font-weight: 900;
+        font-size: 25px;
+        box-shadow: 3px 4px 0px black;
+      
+    }
+
+}
+
+
+

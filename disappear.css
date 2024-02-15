@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: auto;
+  }
+  
+  .main-image img {
+    width: 60vw;
+    height: auto;
+    margin-right: 20px; /* Spacing between images */
+  }
+  
+  .small-images {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to next line */
+    gap: 10px; /* Spacing between small images */
+  }
+  
+  .small-images img {
+    width: 15vw;
+    height: auto;
+    opacity: 0.6; /* Reduced opacity for smaller images */
+    cursor: pointer;
+  }
+  
+  .small-images img.active {
+    opacity: 1; /* Full opacity for the active image */
+  }
+  

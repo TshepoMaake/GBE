@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="business page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <center>
+
+        <div class="menu-container">
+
+            <div class="head-titles">
+        <div class="profile-picture"><img id="profile-image" src="peace.jpg" alt=""></div>
+        <div id="company-name" class="company-name">GB Empire V1.0<i class="fa fa-check-circle" aria-hidden="true"></i></div>
+    
+        <div class="business-rating">
+                    
+            <span class="star" data-rating="1">★</span>
+            <span class="star" data-rating="2">★</span>
+            <span class="star" data-rating="3">★</span>
+            <span class="star" data-rating="4">★</span>
+            <span class="star" data-rating="5">★</span>
+        </div>
+        <span id="avgRating">0</span>
+         
+                </div>
+
+                <div class="nav-menu">
+                
+                
+                    <ul>
+                        
+                        <li><a href="main.html">Home</a></li> 
+                        <li ><a href="#">Contact</a></li> 
+                        <li onclick="openJob()" class="alert" id="jobs" ><div class="notify">Jobs</div></li>
+                        <li onclick="increaseFollowers()"><a class="Follower"><button class="follower">follow</button></a></li>
+                        <li><a href="#">Customers</a><span id="followerCount">0</span></li>
+                       
+                    </ul>
+
+                   </div>
+                 
+        </div>
+       
+    </div>
+   <br><br><br>
+    <!--eCommerce menu-->
+    <div class="update-cover">
+        <div class="update-title">Notifications<i class="fa fa-bell" aria-hidden="true"></i></div>
+        <div class="alert-cover">
+<div id="admin-result"></div>
+</div>
+    </div>
+    <br>
+<div class="eCommerce-nav">
+
+    <div class="heading-menu">
+    <div class="eCommerce-title">Products by category </div>
+
+    <div class="cart-items">
+        <div class="cart-button" onclick="openCart()">Shopping<i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+        <span id="cart-counter">0</span>
+        <div class="track-order" onclick="openTrack()">Track order</div>
+    </div>
+
+    </div>
+    <div class="select">
+        <label id="item-select" for="select">Select</label>
+                <select id="select">
+                
+                        <option>Electronics</option>
+                        <option>Men's clothing</option>
+                        <option>Women's clothing</option>
+                        <option>Kids clothing</option>
+                        <option>Shoes</option>
+                        <option>Home and furniture</option>
+                        <option>Health and beauty</option>
+                        <option>Sports and outdoors</option>
+                        <option>Toys and games</option>
+                        <option>Groceries and household</option>
+                        <option>Catering</option>
+                        <option>Cars</option>
+                        <option>Services</option> 
+                    </select>
+                    <input type="search" id="search" placeholder="Search product instead">
+                <button id="srch">Search</button>
+                <!--add to cart counter-->
+        
+                </div>
+<!--item cart-->
+
+<div class="container">
+
+    <div class="card" id="item1">
+        <img id="category-image" src="men clothing.jpg" alt="">
+        <div class="itemPrice">
+        <div class="title" id="item-name">Men outfit</div>
+        <span class="rr"></span><div class="hover-text" id="hoverText">1300</div>
+        </div>
+     
+    <div>
+        <br>
+        <div class="description-cover">
+    <div id="description">Quality at a low price.</div>
+</div>
+
+
+    </div>
+<br>
+      <div class="item-adding">
+
+     <div class="item-counts">
+    <div id="less">-</div>
+    <div id="item-number">0</div>
+    <div id="more">+</div>
+     </div>
+    <button  class="AddItem" onclick="addToCart(item1)">Add to cart</button>
+      </div>
+        </div>
+</div>
+</div>
+
+
+<div class="Cart" id="Cart">
+    
+    <span class="close" onclick="closeCart()">&times;</span>
+  
+    <div class="title" id="cart-head">Shopping list</div>
+    <div class="order-details">
+      <div class="amount-title">Total R<span class="shopping-total">0</span></div>
+        <input type="email" placeholder="Enter email" required>
+        
+    <input type="email" placeholder="Enter phones" required>
+<div id="submit-order">Place order now</div>
+    </div>
+    <div id="title"></div>
+</div>
+    </div>
+
+
+    <!--jobs-->
+  <div id="Job">
+    <span class="close" onclick="closeJob()">&times;</span>
+    <div class="Job-content"></div>
+    <div class="btn">Click to notify users</div>
+  </div>
+
+    <!--end of jobs-->
+<br><br>
+    <!--customer feedback-->
+
+<div class="shopping-feedback">Shopping feedback</div>
+<br>
+  <!--forum-reviews-->
+  <div class="forum-reviews">
+
+    <main>
+      
+        <section id="review-form">
+            
+           
+            <div>
+<br>
+                <label for="rating">Rating</label>
+                <select id="rating" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <label for="comment">Your Review:</label>
+                <textarea id="comment" required placeholder="type a feedback"></textarea>
+            </div>
+            <button id="submit-review">Submit</button>
+            <br><br>
+        </section>
+        <section id="reviews">
+           
+            <div id="review-list">
+                <!-- Reviews will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+  <!--end of customer-reviews-->
+
+<!--end of customer feedback-->
+
+    <!--track order-->
+
+       <!--track order-->
+   <div id="Track">
+    <div class="Track-content">
+        <span class="close" onclick="closeTrack()">&times;</span>
+        <br><br><br>
+        <h1 class="track-title">Track my order</h1>
+        <br><br>
+        <table>
+             
+            <tr>
+                <th id="order-id"> order ID</th>
+                <th>Date ordered</th>
+                <th>Items</th>
+                <th> Status</th>
+                 
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+                  </table>
+      
+    </div>
+</div
+
+
+
+    <!--end of eCommerce menu-->
+    </center>
+    
+    
+<script>
+
+var addItemId = 0;
+
+
+function addToCart(item){
+addItemId += 1;
+var selectedItem = document.createElement("div");
+selectedItem.classList.add("cartImg");
+selectedItem.setAttribute("id",addItemId);
+var img = document.createElement("img");
+img.setAttribute("src",item.children[0].currentSrc);
+var title = document.createElement("div");
+var cartItems = document.getElementById("title");
+selectedItem.append(img);
+cartItems.append(selectedItem);
+title.innerText = item.children[1].innerText;
+var label = document.createElement("div");
+label.innerText = item.children[2].children[0].innerText;
+var select = document.createElement("span");
+select.innerText = item.children[2].children[1].value;
+label.append(select);
+selectedItem.append(title);
+selectedItem.append(label);
+var delBtn = document.createElement("button");
+delBtn.innerText = "Delete";
+delBtn.setAttribute("onclick", "del("+addItemId+")");
+selectedItem.append(delBtn);
+};
+
+function del(item){
+    document.getElementById(item).remove();
+};
+
+//cart
+function openCart() {
+  document.getElementById('Cart').style.display = 'block';
+}
+
+function closeCart() {
+  document.getElementById('Cart').style.display = 'none';
+}
+
+function openTrack() {
+  document.getElementById('Track').style.display = 'block';
+}
+
+function closeTrack() {
+  document.getElementById('Track').style.display = 'none';
+}
+
+function openJob() {
+  document.getElementById('Job').style.display = 'block';
+}
+
+function closeJob() {
+  document.getElementById('Job').style.display = 'none';
+}
+//increase followers
+
+let followerCount = 0; // Initial follower count
+
+function increaseFollowers() {
+  // Increase the follower count by 1
+  followerCount += 1;
+
+  // Update the displayed follower count
+  const followerCountElement = document.getElementById('followerCount');
+  followerCountElement.innerText = followerCount;
+
+  // Change the button text to "Following"
+  const followButton = document.querySelector('Button');
+  followButton.innerText = 'following';
+  followButton.classList.add('following');
+
+   // Disable the button after clicking
+   followButton.disabled = true;
+ 
+}
+//end of follow
+
+//reviews
+
+document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById("submit-review");
+    const reviewList = document.getElementById("review-list");
+
+    submitButton.addEventListener("click", function() {
+        
+        const rating = document.getElementById("rating").value;
+        const comment = document.getElementById("comment").value;
+      ;
+
+        if (rating && comment) {
+            const review = {
+            
+                rating: rating,
+                comment: comment,
+            };
+
+            // Save the review to local storage
+            saveReview(review);
+
+            // Add the review to the list
+            displayReview(review);
+
+            // Clear the form fields
+       
+            document.getElementById("rating").value = "5";
+            document.getElementById("comment").value = "";
+        }
+    });
+
+    // Load existing reviews from local storage
+    loadReviews();
+
+    function saveReview(review) {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+    }
+
+    function loadReviews() {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        for (const review of reviews) {
+            displayReview(review);
+        }
+    }
+
+    function displayReview(review) {
+        const reviewDiv = document.createElement("div");
+        reviewDiv.classList.add("review");
+     
+      
+        const ratingStars = "★".repeat(review.rating);
+        const ratingText = `<span class="rating">${ratingStars}</span>`;
+
+        reviewDiv.innerHTML = `<h3 id="review-profile">${review.name}</h3>${ratingText}<p>${review.comment}</p>`;
+
+        reviewList.appendChild(reviewDiv);
+    }
+});
+
+
+//end of reviews
+//notification
+var notify = document.querySelector(".notify");
+var btn = document.querySelector(".btn");
+btn.addEventListener("click", active);
+
+function active(){
+    var add = Number(notify.getAttribute("data-count") || 0);
+    notify.setAttribute("data-count", add + 1);
+
+    if(add===0){
+        notify.classList.add("add-numb");
+    }
+    false
+}
+
+
+document.getElementById("admin-result").innerHTML=localStorage.getItem("inputValue");
+
+
+//percentage counter
+
+const counterEl = document.querySelector(".counter");
+const barEl = document.querySelector(".loading-bar-front");
+
+let idx = 0;
+updateNum()
+
+function updateNum(){
+    counterEl.innerHTML= idx+ "%";
+    barEl.style.width= idx+ "%";
+
+    idx++
+
+    if(idx< 101){
+        setTimeout( updateNum, 20)
+    }
+}
+//end of percentage counter
+
+
+</script>
+
+</body>
+</html>

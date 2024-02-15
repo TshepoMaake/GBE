@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  font-size: 21px;
+  margin-left: 10px;
+}
+h2{
+  text-align: left;
+  font-size: 17px;
+  
+}
+ul{
+  display: flex;
+}
+input{
+  padding: 15px 25px;
+  margin-top: 20px;
+  width: 50%;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.172);
+}
+.pass-value{
+  width: 90px;
+  border-radius: 0px;
+  padding: 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -5px;
+}
+#search{
+  padding: 13px;
+  margin-top: 20px;
+  width: 70%;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.172);
+}
+button{
+  padding: 10px 20px;
+  width: 80px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -1px;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.172);
+}
+.manage-users{
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.172);
+  height: 620px;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
+#account-list{
+  width: 100%;
+  background-color: black;
+  height: 500px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+th{
+  padding: 10px 20px;
+  font-weight: 100;
+  width: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: 0px;
+  font-size: 15px;
+}
+td{
+  font-size: 13px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+label{
+  display: none;
+}
+table{
+  margin-top: 10px;
+}
+select{
+  width: 10px;
+ 
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.185);
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}

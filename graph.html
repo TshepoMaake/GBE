@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business Performance Analysis</title>
+<!-- Include Chart.js and Moment.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Business Performance Analysis</h1>
+  
+  <!-- Display current month and year -->
+  <p id="currentDate"></p>
+  
+  <!-- Graph container -->
+  <div class="graph-container">
+    <canvas id="priceGraph"></canvas>
+  </div>
+  
+  <!-- Paragraph to display business performance -->
+  <p id="businessPerformance">Business performance will be analyzed here.</p>
+</div>
+
+
+<script defer>
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Display current month and year using Moment.js
+  const currentDate = moment().format('MMMM YYYY');
+  document.getElementById('currentDate').textContent = `Current Date: ${currentDate}`;
+
+  // Create a sample graph using Chart.js
+  const ctx = document.getElementById('priceGraph').getContext('2d');
+  const priceGraph = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May'],
+      datasets: [{
+        label: 'Previous Performance',
+        data: [10, 20, 15, 25, 30], // Sample data for previous performance
+        borderColor: 'rgba(75, 192, 192, 1)',
+        fill: false
+      }, {
+        label: 'Current Performance',
+        data: [15, 25, 20, 30, 35], // Sample data for current performance
+        borderColor: 'rgba(255, 99, 132, 1)',
+        fill: false
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  // Analyze business performance based on price comparison
+  const previousPerformance = [10, 20, 15, 25, 30].reduce((a, b) => a + b, 0);
+  const currentPerformance = [15, 25, 20, 30, 35].reduce((a, b) => a + b, 0);
+  const performanceDifference = currentPerformance - previousPerformance;
+  
+  const businessPerformanceParagraph = document.getElementById('businessPerformance');
+  if (performanceDifference > 0) {
+    businessPerformanceParagraph.textContent = `Business is doing well with an improvement of ${performanceDifference}% compared to the previous period.`;
+  } else if (performanceDifference < 0) {
+    businessPerformanceParagraph.textContent = `Business needs improvement as there is a decrease of ${Math.abs(performanceDifference)}% compared to the previous period.`;
+  } else {
+    businessPerformanceParagraph.textContent = 'Business performance remains stable compared to the previous period.';
+  }
+});
+
+
+</script>
+</body>
+</html>

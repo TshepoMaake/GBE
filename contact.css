@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.388);
+    background-color: black;
+}
+h1{
+     margin-top: 20px;
+     font-size: 20px;
+     padding: 20px;
+     background-color: rgb(20, 20, 20);
+     font-weight: 100;
+     margin-top: -3px;
+}
+.contact-cover{
+    padding: 30px;
+    background-color: rgb(30, 30, 30);
+    margin-top: -33px;
+  
+    font-size: 12px;
+}
+#contact{
+    margin: 45px;
+    color: rgba(255, 255, 255, 0.426);
+  
+    line-height: 20px;
+}
+.contact{
+    line-height: 20px;
+    font-size: 13px;
+}
+

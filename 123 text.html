@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Infinite Curved Letter Animation</title>
+<link rel="stylesheet" href="123 text.css">
+</head>
+<body>
+
+<div class="container">
+  <span class="animated-text" id="animatedText"></span>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    function animateText() {
+        const text = "Welcome!";
+        const textContainer = document.getElementById('animatedText');
+        textContainer.textContent = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.animationDelay = `${i * 0.2}s`;
+            textContainer.appendChild(span);
+        }
+    }
+
+    setInterval(() => {
+        animateText(); // Re-animate every 5 seconds
+    }, 2100); // Wait for 5.2 seconds before re-animating
+});
+
+
+</script>
+
+</body>
+</html>
+
+
